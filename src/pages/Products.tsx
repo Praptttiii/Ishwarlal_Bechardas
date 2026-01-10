@@ -1,60 +1,65 @@
 import { Link } from 'react-router-dom';
-// import cuminImage from 'src\assets\cumin-seeds.jpg';
-// import mustardImage from 'src\assets\mustard-seeds.jpg';
-// import sesameImage from 'src\assets\sesame-seeds.jpg';
-// import fennelImage from 'src\assets\fennel-seeds.jpg';
-// import psylliumImage from 'src\assets\psyllium-seeds.jpg';
-// import masalaImage from 'src\assets\masala-spices.jpg';
+import cuminImage from '@/assets/cumin-seeds.jpg';
+import fennelImage from '@/assets/Fennel_Seeds.png';
+import psylliumImage from '@/assets/psyllium-seeds.jpg';
+import fennelWithPlant from '@/assets/fennel-seeds-with-fennel-plant.jpg'
 import { Button } from '../components/ui/button';
 import Layout from '../components/layout/Layout';
+import cuminBold from '@/assets/Cumin-Spice.webp';
+import isabgol from '@/assets/Isabgol-Psyllium.jpg';
+import blackSesame from '@/assets/black-sesame.jpg';
+import whiteSesame from '@/assets/white-sesame.jpg';
+import mustardBlack from '@/assets/mustard-seeds.jpg';
+import mustardYellow from '@/assets/yellow-mustard.jpg';
+import corianderImage from '@/assets/coriander-seeds.jpg';
+import methiImage from '@/assets/methi-seeds.jpg';
 
 const products = [
   {
-    category: 'Mustard Seeds',
+    category: 'Fennel Seeds',
     items: [
-      { name: 'Black Mustard Seeds',  },
-      { name: 'Brown Mustard Seeds', },
-      { name: 'Red Mustard Seeds', },
+      { name: 'Super Extra Bold Fennel Seeds', image: fennelImage },
+      { name: 'Bold Fennel Seed with Plant', image:fennelWithPlant }
     ],
   },
   {
     category: 'Cumin Seeds',
     items: [
-      { name: 'White Cumin Seeds', },
-      { name: 'Organic Cumin Seeds', },
-    ],
-  },
-  {
-    category: 'Sesame Seeds',
-    items: [
-      { name: 'Black Sesame Seeds', },
-      { name: 'White Sesame Seeds',  },
-      { name: 'Hulled Sesame Seeds',  },
-    ],
-  },
-  {
-    category: 'Fennel Seeds',
-    items: [
-      { name: 'Lucknowi Fennel',  },
-      { name: 'Bold Fennel Seeds',  },
+      { name: 'Super Extra Bold Cumin Seeds', image: cuminImage },
+      { name: 'Bold Cumin Seeds', image: cuminBold },
     ],
   },
   {
     category: 'Psyllium (Isabgol)',
     items: [
-      { name: 'Psyllium Seeds',  },
-      { name: 'Psyllium Husk', },
+      { name: 'Original Psyllium', image: isabgol },
+      { name: 'Psyllium Husk', image: psylliumImage },
     ],
   },
   {
-    category: 'Masala & Spices',
+    category: 'Coriander Seeds',
     items: [
-      { name: 'Coriander Seeds', },
-      { name: 'Fenugreek Seeds',  },
-      { name: 'Ajwain (Carom Seeds)', },
+     { name: 'Coriander Seeds', image: corianderImage },
     ],
   },
+   {
+    category: 'Methi Seeds',
+    items: [
+     { name: 'Methi Seeds', image: methiImage },
+    ],
+  },
+  {
+    category: 'Oil Seeds',
+    items: [
+      { name: 'Black Mustard Seeds', image: mustardBlack },
+      { name: 'Brown Mustard Seeds', image: mustardYellow },
+      { name: 'Black Sesame Seeds', image: blackSesame },
+      { name: 'White Sesame Seeds', image: whiteSesame },
+    ],
+  },
+
 ];
+
 
 const Products = () => {
   return (
@@ -102,7 +107,7 @@ const Products = () => {
                     >
                       <div className="aspect-[4/3] overflow-hidden">
                         <img
-                      
+                          src={item.image}
                           alt={item.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />

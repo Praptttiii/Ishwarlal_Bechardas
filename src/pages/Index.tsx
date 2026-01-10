@@ -4,30 +4,31 @@ import { ArrowRight, Shield, Truck, Award, Clock } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import heroImage from '@/assets/hero-spices.jpg';
 import cuminImage from '@/assets/cumin-seeds.jpg';
-import mustardImage from '@/assets/mustard-seeds.jpg';
+import fennelImage from '@/assets/Fennel_Seeds.png';
+import psylliumImage from '@/assets/psyllium-seeds.jpg';
 import sesameImage from '@/assets/sesame-seeds.jpg';
-import masalaImage from '@/assets/masala-spices.jpg';
+
 
 const productCategories = [
   {
-    name: 'Masala Seeds',
+    name: 'Feneel Seeds',
     description: 'Cumin, coriander, and aromatic spice seeds',
-    image: masalaImage,
+    image: fennelImage,
   },
-  {
-    name: 'Mustard Seeds',
-    description: 'Black, brown, and red mustard varieties',
-    image: mustardImage,
-  },
-  {
-    name: 'Oil Seeds',
-    description: 'Sesame, sunflower, and other oil seeds',
+   {
+    name: 'Sesame Seeds',
+    description: 'Black, and white seame seeds varieties',
     image: sesameImage,
   },
-  {
-    name: 'Other Products',
+   {
+    name: 'Cumin Seeds',
     description: 'Fennel, psyllium, and specialty seeds',
     image: cuminImage,
+  },
+  {
+    name: 'Psyllium Husk',
+    description: 'Sesame, sunflower, and other oil seeds',
+    image: psylliumImage,
   },
 ];
 

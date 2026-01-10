@@ -70,24 +70,21 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl text-primary-foreground">
            <p className="text-gold-light font-medium mb-4 tracking-wide uppercase text-sm animate-fade-in mt-3 md:mt-0">
-              Established 1976 • Unjha, Gujarat
             </p>
              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               Ms Iswarlal Bechardad Patel, Unjha
             </h1>
             <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Leading Supplier of Quality Spices & Seeds from Unjha
+              Leading Supplier of Quality Spices & Seeds from Unjha, Gujarat
             </h2>
             <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Wholesale distribution of premium agricultural seeds and spices. 
-              Serving businesses with bulk supply, consistent quality, and trusted 
-              service for over four decades.
+             
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Button asChild variant="hero" size="lg">
+              <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
                 <Link to="/contact">Get a Quote</Link>
               </Button>
-              <Button asChild variant="heroOutline" size="lg">
+              <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
                 <Link to="/products">
                   View Products <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
@@ -193,7 +190,7 @@ const Index = () => {
             Contact us today for competitive wholesale prices and reliable delivery 
             across India.
           </p>
-          <Button asChild variant="hero" size="lg">
+          <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
             <Link to="/contact">Contact Us Now</Link>
           </Button>
         </div>

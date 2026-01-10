@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
+
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">

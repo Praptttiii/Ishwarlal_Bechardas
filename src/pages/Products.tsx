@@ -6,7 +6,6 @@ import whiteCuminImage from '../assets/white_cumin.png';
 import organicCuminImage from '../assets/Organic_cumin.png';
 import blackSesameImage from '../assets/Black_seame.png';
 import hulledSesameImage from '../assets/hulled_seed.png';
-import lucknowiFennelImage from '../assets/Boldfennel_seed.png';
 import boldFennelImage from '../assets/Boldfennel_seed.png';
 import lakhFennelImage from '../assets/lakhfennel_seed.png';
 import psylliumSeedsImage from '../assets/Psyllium_seed.png';
@@ -19,6 +18,20 @@ import Layout from '../components/layout/Layout';
 
 const products = [
   {
+    category: 'Fennel Seeds',
+    items: [
+      { name: 'Lucknowi Fennel', image: lakhFennelImage},
+      { name: 'Bold Fennel Seeds', image: boldFennelImage },
+    ],
+  },
+   {
+    category: 'Cumin Seeds',
+    items: [
+      { name: 'White Cumin Seeds', image: whiteCuminImage },
+      { name: 'Organic Cumin Seeds', image: organicCuminImage },
+    ],
+  },
+  {
     category: 'Mustard Seeds',
     items: [
       { name: 'Black Mustard Seeds', image: blackMustardImage },
@@ -27,25 +40,10 @@ const products = [
     ],
   },
   {
-    category: 'Cumin Seeds',
-    items: [
-      { name: 'White Cumin Seeds', image: whiteCuminImage },
-      { name: 'Organic Cumin Seeds', image: organicCuminImage },
-    ],
-  },
-  {
     category: 'Sesame Seeds',
     items: [
       { name: 'Black Sesame Seeds', image: blackSesameImage },
-      { name: 'White Sesame Seeds', image: blackSesameImage },
       { name: 'Hulled Sesame Seeds', image: hulledSesameImage },
-    ],
-  },
-  {
-    category: 'Fennel Seeds',
-    items: [
-      { name: 'Lucknowi Fennel', image: lakhFennelImage},
-      { name: 'Bold Fennel Seeds', image: boldFennelImage },
     ],
   },
   {

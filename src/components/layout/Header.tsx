@@ -87,7 +87,7 @@ const Header = () => {
                 className="flex items-center gap-2 text-primary py-2 px-4"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm font-medium">+91 9898320482</span>
+                <span className="text-sm font-medium">+91 9428960482</span>
               </a>
             </div>
           </nav>

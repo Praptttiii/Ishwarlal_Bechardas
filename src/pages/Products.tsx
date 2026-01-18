@@ -1,65 +1,67 @@
 import { Link } from 'react-router-dom';
-import cuminImage from '@/assets/cumin-seeds.jpg';
-import fennelImage from '@/assets/Fennel_Seeds.png';
-import psylliumImage from '@/assets/psyllium-seeds.jpg';
-import fennelWithPlant from '@/assets/fennel-seeds-with-fennel-plant.jpg'
+import blackMustardImage from '../assets/Black_mustard_seed.png';
+import brownMustardImage from '../assets/Brown_mustard_seed.png';
+import redMustardImage from '../assets/red_mustard.png';
+import whiteCuminImage from '../assets/white_cumin.png';
+import organicCuminImage from '../assets/Organic_cumin.png';
+import blackSesameImage from '../assets/Black_seame.png';
+import hulledSesameImage from '../assets/hulled_seed.png';
+import boldFennelImage from '../assets/Boldfennel_seed.png';
+import lakhFennelImage from '../assets/lakhfennel_seed.png';
+import psylliumSeedsImage from '../assets/Psyllium_seed.png';
+import psylliumHuskImage from '../assets/Phyllium_husk.png';
+import corianderImage from '../assets/coriander_seed.png';
+import fenugreekImage from '../assets/fenugreek_seed.png';
+import ajwainImage from '../assets/ajwain_seed.png';
 import { Button } from '../components/ui/button';
 import Layout from '../components/layout/Layout';
-import cuminBold from '@/assets/Cumin-Spice.webp';
-import isabgol from '@/assets/Isabgol-Psyllium.jpg';
-import blackSesame from '@/assets/black-sesame.jpg';
-import whiteSesame from '@/assets/white-sesame.jpg';
-import mustardBlack from '@/assets/mustard-seeds.jpg';
-import mustardYellow from '@/assets/yellow-mustard.jpg';
-import corianderImage from '@/assets/coriander-seeds.jpg';
-import methiImage from '@/assets/methi-seeds.jpg';
 
 const products = [
   {
     category: 'Fennel Seeds',
     items: [
-      { name: 'Super Extra Bold Fennel Seeds', image: fennelImage },
-      { name: 'Bold Fennel Seed with Plant', image:fennelWithPlant }
+      { name: 'Lucknowi Fennel', image: lakhFennelImage},
+      { name: 'Bold Fennel Seeds', image: boldFennelImage },
+    ],
+  },
+   {
+    category: 'Cumin Seeds',
+    items: [
+      { name: 'White Cumin Seeds', image: whiteCuminImage },
+      { name: 'Organic Cumin Seeds', image: organicCuminImage },
     ],
   },
   {
-    category: 'Cumin Seeds',
+    category: 'Mustard Seeds',
     items: [
-      { name: 'Super Extra Bold Cumin Seeds', image: cuminImage },
-      { name: 'Bold Cumin Seeds', image: cuminBold },
+      { name: 'Black Mustard Seeds', image: blackMustardImage },
+      { name: 'Brown Mustard Seeds', image: brownMustardImage },
+      { name: 'Red Mustard Seeds', image: redMustardImage },
+    ],
+  },
+  {
+    category: 'Sesame Seeds',
+    items: [
+      { name: 'Black Sesame Seeds', image: blackSesameImage },
+      { name: 'Hulled Sesame Seeds', image: hulledSesameImage },
     ],
   },
   {
     category: 'Psyllium (Isabgol)',
     items: [
-      { name: 'Original Psyllium', image: isabgol },
-      { name: 'Psyllium Husk', image: psylliumImage },
+      { name: 'Psyllium Seeds', image: psylliumSeedsImage },
+      { name: 'Psyllium Husk', image: psylliumHuskImage },
     ],
   },
   {
-    category: 'Coriander Seeds',
+    category: 'Masala & Spices',
     items: [
-     { name: 'Coriander Seeds', image: corianderImage },
+      { name: 'Coriander Seeds', image: corianderImage },
+      { name: 'Fenugreek Seeds', image: fenugreekImage },
+      { name: 'Ajwain (Carom Seeds)', image: ajwainImage },
     ],
   },
-   {
-    category: 'Methi Seeds',
-    items: [
-     { name: 'Methi Seeds', image: methiImage },
-    ],
-  },
-  {
-    category: 'Oil Seeds',
-    items: [
-      { name: 'Black Mustard Seeds', image: mustardBlack },
-      { name: 'Brown Mustard Seeds', image: mustardYellow },
-      { name: 'Black Sesame Seeds', image: blackSesame },
-      { name: 'White Sesame Seeds', image: whiteSesame },
-    ],
-  },
-
 ];
-
 
 const Products = () => {
   return (
@@ -69,7 +71,6 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <p className="text-gold-light font-medium mb-4 tracking-wide uppercase text-sm">
-              Wholesale Only
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">
               Our Products
@@ -151,7 +152,7 @@ const Products = () => {
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Get in touch for wholesale pricing, sample requests, and bulk order inquiries.
           </p>
-          <Button asChild variant="hero" size="lg">
+          <Button asChild variant="hero" size="lg" className="bg-white text-black hover:bg-gray-100">
             <Link to="/contact">Request a Quote</Link>
           </Button>
         </div>

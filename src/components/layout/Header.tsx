@@ -50,7 +50,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-2 text-primary">
             <Phone className="h-4 w-4" />
             <a href="tel:+919898123456" className="text-sm font-medium">
-              +91 98981 23456
+              +91 9428960482
             </a>
           </div>
 
@@ -83,7 +83,7 @@ const Header = () => {
                 </Link>
               ))}
               <a
-                href="tel:+919898123456"
+                href="tel:+9198981234562222222222222"
                 className="flex items-center gap-2 text-primary py-2 px-4"
               >
                 <Phone className="h-4 w-4" />

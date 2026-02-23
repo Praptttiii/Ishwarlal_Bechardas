@@ -6,7 +6,7 @@ import { Input } from '../components/ui/input.tsx';
 import { Textarea } from '../components/ui/textarea.tsx';
 import { Button } from '../components/ui/button.tsx';
 import { Label } from '../components/ui/label.tsx';
-
+import axios from "axios";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -25,28 +25,37 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await axios.post("http://localhost:5000/api/contact", formData);
 
     toast({
-      title: 'Inquiry Submitted',
-      description: 'Thank you for your interest. We will contact you shortly.',
+      title: "Inquiry Submitted",
+      description: "Thank you! We will contact you shortly.",
     });
 
     setFormData({
-      name: '',
-      company: '',
-      phone: '',
-      email: '',
-      product: '',
-      message: '',
+      name: "",
+      company: "",
+      phone: "",
+      email: "",
+      product: "",
+      message: "",
     });
-    setIsSubmitting(false);
-  };
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: "Failed to send inquiry.",
+      variant: "destructive",
+    });
+  }
+
+  setIsSubmitting(false);
+};
 
   return (
     <Layout>

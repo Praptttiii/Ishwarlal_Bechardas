@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
 import { Award, Users, TrendingUp, Heart } from 'lucide-react';
+import AnkurImage from '@/assets/ankur.jpg';
+import MokshitImage from '@/assets/Mokshit.jpeg';
 
 const stats = [
-  { value: '47+', label: 'Years of Experience' },
+  { value: '50+', label: 'Years of Experience' },
   { value: '₹1.5-5 Cr', label: 'Annual Turnover' },
   { value: '100+', label: 'Regular Buyers' },
   { value: '20+', label: 'Product Varieties' },
@@ -76,7 +78,7 @@ const About = () => {
                   honest pricing and reliable service.
                 </p>
                 <p>
-                  Today, the second generation continues this legacy, combining 
+                  Today, the fifth generation continues this legacy, combining 
                   traditional market knowledge with modern business practices. We 
                   remain committed to the values that built our reputation—integrity, 
                   quality, and customer satisfaction.
@@ -84,14 +86,101 @@ const About = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="relative rounded-lg overflow-hidden shadow-elegant">
-                <img
-                  alt="Unjha Mandi - Spice Trading"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
-              </div>
+            <div className="relative rounded-lg overflow-hidden shadow-elegant h-[400px]">
+              <iframe
+                title="Patel Iswarlal Bechardas Location"
+                src="https://www.google.com/maps?q=Gate%20no.1,%20APMC,%20A/34%20Old%20Main%20Line,%20Gunj%20Bazar,%20Unjha,%20Gujarat%20384170,%20India&output=embed"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legacy Section */}
+      <section className="py-24 bg-gradient-to-b from-background to-beige overflow-hidden">
+        <div className="container mx-auto px-4">
+
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <p className="text-gold font-medium tracking-widest uppercase text-sm mb-3">
+              Five Generations of Leadership
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+              Our Legacy
+            </h2>
+            <div className="w-24 h-1 bg-gold mx-auto mt-4 rounded-full" />
+          </div>
+
+          {/* Scrollable Row */}
+          <div className="flex gap-8 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory">
+            {[
+              {
+                name: 'Bechardas Patel',
+                role: 'Founder (1976)',
+                image: '/legacy/bechardas.jpg',
+                description: 'Established the foundation of trust and honesty in Unjha mandi.',
+              },
+              {
+                name: 'Ishwarlal Patel',
+                role: 'Second Generation',
+                image: '/legacy/ishwarlal.jpg',
+                description: 'Expanded trade relationships and strengthened farmer connections.',
+              },
+              {
+                name: 'Chandubhai Patel',
+                role: 'Third Generation',
+                image: '/legacy/chandubhai.jpg',
+                description: 'Modernized operations while preserving traditional values.',
+              },
+              {
+                name: 'Ankur Patel',
+                role: 'Fourth Generation',
+                image: AnkurImage,
+                description: 'Introduced structured wholesale systems and buyer network growth.',
+              },
+              {
+                name: 'Mokshit Patel',
+                role: 'Fifth Generation',
+                image: MokshitImage,
+                description: 'Blending digital presence with 50 years of market expertise.',
+              },
+            ].map((member) => (
+              <div
+                key={member.name}
+                className="min-w-[280px] md:min-w-[320px] bg-card rounded-xl overflow-hidden shadow-lg border border-border group transform transition duration-500 hover:-translate-y-4 hover:shadow-2xl snap-center"
+              >
+                {/* Image */}
+                <div className="relative h-80 overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-gold text-sm font-medium mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {member.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+
           </div>
         </div>
       </section>

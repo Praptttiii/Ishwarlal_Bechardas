@@ -7,8 +7,7 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
-import { Toaster } from "./components/ui/sonner";
-
+import { Toaster } from "@/components/ui/toaster";
 const queryClient = new QueryClient();
 
 const App = () => (

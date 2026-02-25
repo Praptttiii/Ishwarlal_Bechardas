@@ -156,23 +156,21 @@ const handleSubmit = async (e: React.FormEvent) => {
                     </div>
                   </div>
                 </div>
-
                 <div className="p-6 bg-card border border-border rounded-lg space-y-3">
                   <div>
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Patel Iswarlal Bechardas</strong><br />
+                    <p className="text-sm font-bold text-foreground">
+                      Patel Iswarlal Bechardas <br />
                       GST: 24ABYPP8468J1ZL
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Neeti Sales Corporation</strong><br />
+                    <p className="text-sm font-bold text-foreground">
+                      Neeti Sales Corporation <br />
                       GST: 24AGEPP2982L1Z0
                     </p>
                   </div>
                 </div>
               </div>
-
               {/* Contact Form */}
               <div className="lg:col-span-3">
                 <div className="bg-card border border-border rounded-lg p-8 shadow-card">

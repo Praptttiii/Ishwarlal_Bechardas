@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
 import { Award, Users, TrendingUp, Heart } from 'lucide-react';
-import AnkurImage from '@/assets/ankur.jpg';
-import MokshitImage from '@/assets/Mokshit.jpeg';
-
+import AnkurImage from '@/assets/ankur.png';
+import MokshitImage from '@/assets/mokshit.png';
+import Iswarlal from '@/assets/Ishwarlal.png';
+import Bechardas from '@/assets/Bechardas.png'
+import Chandubhai from '@/assets/chandubhai.png'
 const stats = [
   { value: '50+', label: 'Years of Experience' },
   { value: '₹1.5-5 Cr', label: 'Annual Turnover' },
@@ -124,19 +126,19 @@ const About = () => {
               {
                 name: 'Bechardas Patel',
                 role: 'Founder (1976)',
-                image: '/legacy/bechardas.jpg',
+                image: Bechardas,
                 description: 'Established the foundation of trust and honesty in Unjha mandi.',
               },
               {
                 name: 'Ishwarlal Patel',
                 role: 'Second Generation',
-                image: '/legacy/ishwarlal.jpg',
+                image: Iswarlal,
                 description: 'Expanded trade relationships and strengthened farmer connections.',
               },
               {
                 name: 'Chandubhai Patel',
                 role: 'Third Generation',
-                image: '/legacy/chandubhai.jpg',
+                image: Chandubhai,
                 description: 'Modernized operations while preserving traditional values.',
               },
               {

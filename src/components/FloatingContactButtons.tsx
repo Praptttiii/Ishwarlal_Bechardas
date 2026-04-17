@@ -1,18 +1,25 @@
-import { MessageCircle, Mail } from 'lucide-react';
+import { MessageCircle, Mail } from "lucide-react";
 
 const FloatingContactButtons = () => {
-  const whatsappNumber = '+919428960482';
-  const email = 'ankur9428960482@gmail.com';
+  const whatsappNumber = "+919428960482";
+  const email = "ankur9428960482@gmail.com";
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent('Hello, I am interested in your spices and seeds products. Please share more details.');
-    window.open(`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${message}`, '_blank');
+    const message = encodeURIComponent(
+      "Hello, I am interested in your spices and seeds products. Please share more details.",
+    );
+    window.open(
+      `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${message}`,
+      "_blank",
+    );
   };
 
   const handleEmailClick = () => {
-    const subject = encodeURIComponent('Inquiry for Bulk Spices and Seeds');
-    const body = encodeURIComponent('Dear Patel Iswarlal Bechardas,\n\nI am interested in your products. Please share more details.\n\nThank you.');
-    window.open(`mailto:${email}?subject=${subject}&body=${body}`, '_blank');
+    const subject = encodeURIComponent("Inquiry for Bulk Spices and Seeds");
+    const body = encodeURIComponent(
+      "Dear  Bechardas Madhavdas Patel Export ,\n\nI am interested in your products. Please share more details.\n\nThank you.",
+    );
+    window.open(`mailto:${email}?subject=${subject}&body=${body}`, "_blank");
   };
 
   return (

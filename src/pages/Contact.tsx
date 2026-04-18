@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useToast } from "../components/ui/use-toast.ts";
 import Layout from "../components/layout/Layout.tsx";
+import Seo from "../components/Seo.tsx";
 import { Input } from "../components/ui/input.tsx";
 import { Textarea } from "../components/ui/textarea.tsx";
 import { Button } from "../components/ui/button.tsx";
@@ -60,6 +61,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Contact Us | Wholesale Spice & Seed Supplier in Unjha"
+        description="Contact Bechardas Maadhavdas Patel Exports for bulk spice, seed, and agricultural product inquiries, sourcing support, and quotations."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="container mx-auto px-4">

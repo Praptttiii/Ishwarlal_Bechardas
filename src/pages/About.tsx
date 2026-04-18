@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/Layout';
+import Seo from '@/components/Seo';
 import { Award, Users, TrendingUp, Heart } from 'lucide-react';
 import AnkurImage from '@/assets/ankur.png';
 import MokshitImage from '@/assets/mokshit.png';
@@ -50,6 +51,12 @@ const visionMission = [
 const About = () => {
   return (
     <Layout>
+      <Seo
+        title="About Us | Bechardas Maadhavdas Patel Exports"
+        description="Learn about the history, legacy, values, and agricultural trade expertise of Bechardas Maadhavdas Patel Exports in Unjha, Gujarat."
+        path="/about"
+        image={AnkurImage}
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="container mx-auto px-4">

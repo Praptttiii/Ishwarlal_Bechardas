@@ -15,6 +15,7 @@ import fenugreekImage from '../assets/fenugreek_seed.png';
 import ajwainImage from '../assets/ajwain_seed.png';
 import { Button } from '../components/ui/button';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/Seo';
 
 const products = [
   {
@@ -66,6 +67,12 @@ const products = [
 const Products = () => {
   return (
     <Layout>
+      <Seo
+        title="Products | Cumin, Fennel, Mustard, Sesame & Psyllium"
+        description="Explore bulk agricultural products including cumin seeds, fennel seeds, mustard, sesame, psyllium, coriander, fenugreek, and ajwain."
+        path="/products"
+        image={whiteCuminImage}
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="container mx-auto px-4">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Eye, Target, Globe, Truck, Shield } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 
 const focusAreas = [
@@ -27,6 +28,11 @@ const focusAreas = [
 const VisionMission = () => {
   return (
     <Layout>
+      <Seo
+        title="Vision & Mission | Bechardas Maadhavdas Patel Exports"
+        description="Discover our vision, mission, and service focus in global sourcing, quality assurance, and supply chain support for bulk trade."
+        path="/vision-mission"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="container mx-auto px-4">

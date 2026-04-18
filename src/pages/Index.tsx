@@ -10,6 +10,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 import heroImage from "@/assets/hero-spices.jpg";
 import cuminImage from "@/assets/cumin-seeds.jpg";
 import fennelImage from "@/assets/Fennel_Seeds.png";
@@ -92,6 +93,20 @@ const exportServices = [
 const Index = () => {
   return (
     <Layout>
+      <Seo
+        title="Bechardas Maadhavdas Patel Exports | Wholesale Spices & Seeds from Unjha"
+        description="Bulk supplier and exporter of cumin seeds, fennel seeds, sesame, mustard, psyllium, and other agricultural products from Unjha, Gujarat."
+        path="/"
+        image={heroImage}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Bechardas Maadhavdas Patel Exports",
+            url: "https://patelibseeds.com/",
+          },
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">
         <div

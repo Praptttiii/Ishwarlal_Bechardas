@@ -35,6 +35,18 @@ const values = [
   },
 ];
 
+const visionMission = [
+  {
+    title: "Our Vision",
+    description:
+      "To be a trusted partner for buyers seeking dependable sourcing of spices, seeds, and agricultural commodities from India.",
+  },
+  {
+    title: "Our Mission",
+    description:
+      "To simplify bulk trade through honest pricing, quality-focused sourcing, and reliable supply chain coordination backed by long-term relationships.",
+  },
+];
 const About = () => {
   return (
     <Layout>
@@ -49,7 +61,7 @@ const About = () => {
               About Patel Iswarlal Bechardas
             </h1>
             <p className="text-lg opacity-90 leading-relaxed">
-              A family legacy of quality, trust, and dedication to the spice trade 
+              A family legacy of trust, quality, and export-focused trade support
               spanning nearly five decades.
             </p>
           </div>
@@ -101,6 +113,41 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
             </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-20 bg-beige">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-gold font-medium mb-4 tracking-wide uppercase text-sm">
+              Vision & Mission
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Built for Long-Term Trade Relationships
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Our direction is shaped by the same principles that built our
+              business in Unjha: reliability, transparency, and steady growth
+              for every buyer we serve.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {visionMission.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-border bg-card p-8 shadow-card"
+              >
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

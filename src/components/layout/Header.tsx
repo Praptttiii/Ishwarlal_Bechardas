@@ -6,6 +6,7 @@ import logo from '@/assets/logo.png';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
+  { name: 'Vision & Mission', path: '/vision-mission' },
   { name: 'Products', path: '/products' },
   { name: 'Contact Us', path: '/contact' },
 ];

@@ -46,6 +46,12 @@ const Footer = () => {
                 About Us
               </Link>
               <Link
+                to="/vision-mission"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Vision & Mission
+              </Link>
+              <Link
                 to="/products"
                 className="text-sm opacity-80 hover:opacity-100 transition-opacity"
               >

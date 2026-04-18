@@ -18,7 +18,7 @@ const Footer = () => {
               <div>
                 <h3 className="font-serif text-lg font-semibold">
                   {" "}
-                  Bechardas Madhavdas Patel Export
+                    Bechardas Maadhavdas Patel Exports
                 </h3>
                 <p className="text-sm opacity-80">Since 1976</p>
               </div>
@@ -124,8 +124,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm opacity-60">
-              © {new Date().getFullYear()} Patel Iswarlal Bechardas. All rights
-              reserved.
+              © {new Date().getFullYear()} Bechardas Maadhavdas Patel Exports
             </p>
             <p className="text-sm opacity-60">
               Wholesale Distributors of Quality Spices & Seeds

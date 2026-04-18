@@ -73,7 +73,7 @@ const Index = () => {
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
-              Bechardas Madhavdas Patel Export
+              Bechardas Maadhavdas Patel Exports
             </h1>
             <h2
               className="font-serif text-3xl md:text-4xl mb-6 animate-fade-in"

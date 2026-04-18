@@ -17,7 +17,7 @@ const FloatingContactButtons = () => {
   const handleEmailClick = () => {
     const subject = encodeURIComponent("Inquiry for Bulk Spices and Seeds");
     const body = encodeURIComponent(
-      "Dear  Bechardas Madhavdas Patel Export ,\n\nI am interested in your products. Please share more details.\n\nThank you.",
+      "Dear Bechardas Maadhavdas Patel Exports ,\n\nI am interested in your products. Please share more details.\n\nThank you.",
     );
     window.open(`mailto:${email}?subject=${subject}&body=${body}`, "_blank");
   };

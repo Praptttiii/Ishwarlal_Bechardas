@@ -313,7 +313,7 @@ const Contact = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title=" Bechardas Madhavdas Patel Export Office - Gate no.1, APMC, Unjha, Gujarat"
+            title=" Bechardas Maadhavdas Patel Exports Office - Gate no.1, APMC, Unjha, Gujarat"
           />
         </div>
       </section>

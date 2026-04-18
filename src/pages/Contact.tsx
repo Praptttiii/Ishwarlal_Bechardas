@@ -1,61 +1,62 @@
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { useToast } from '../components/ui/use-toast.ts';
-import Layout from '../components/layout/Layout.tsx';
-import { Input } from '../components/ui/input.tsx';
-import { Textarea } from '../components/ui/textarea.tsx';
-import { Button } from '../components/ui/button.tsx';
-import { Label } from '../components/ui/label.tsx';
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { useToast } from "../components/ui/use-toast.ts";
+import Layout from "../components/layout/Layout.tsx";
+import { Input } from "../components/ui/input.tsx";
+import { Textarea } from "../components/ui/textarea.tsx";
+import { Button } from "../components/ui/button.tsx";
+import { Label } from "../components/ui/label.tsx";
 import axios from "axios";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    phone: '',
-    email: '',
-    product: '',
-    message: '',
+    name: "",
+    company: "",
+    phone: "",
+    email: "",
+    product: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    try {
+      await axios.post("http://localhost:5000/api/contact", formData);
 
-  try {
-    await axios.post("http://localhost:5000/api/contact", formData);
+      toast({
+        title: "Inquiry Submitted",
+        description: "Thank you! We will contact you shortly.",
+      });
 
-    toast({
-      title: "Inquiry Submitted",
-      description: "Thank you! We will contact you shortly.",
-    });
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        product: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send inquiry.",
+        variant: "destructive",
+      });
+    }
 
-    setFormData({
-      name: "",
-      company: "",
-      phone: "",
-      email: "",
-      product: "",
-      message: "",
-    });
-  } catch (error) {
-    toast({
-      title: "Error",
-      description: "Failed to send inquiry.",
-      variant: "destructive",
-    });
-  }
-
-  setIsSubmitting(false);
-};
+    setIsSubmitting(false);
+  };
 
   return (
     <Layout>
@@ -95,12 +96,18 @@ const handleSubmit = async (e: React.FormEvent) => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          Address
+                        </h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">
-                          Patel Iswarlal Bechardas<br />
-                          Gate no.1, APMC, A/34<br />
-                          Old Main Line, Gunj Bazar<br />
-                          Unjha, Gujarat - 384170<br />
+                          Patel Iswarlal Bechardas
+                          <br />
+                          Gate no.1, APMC, A/34
+                          <br />
+                          Old Main Line, Gunj Bazar
+                          <br />
+                          Unjha, Gujarat - 384170
+                          <br />
                           India
                         </p>
                       </div>
@@ -113,7 +120,9 @@ const handleSubmit = async (e: React.FormEvent) => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Phone / WhatsApp</h3>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          Phone / WhatsApp
+                        </h3>
                         <a
                           href="tel:+919428960482"
                           className="text-muted-foreground text-sm hover:text-primary transition-colors"
@@ -130,7 +139,9 @@ const handleSubmit = async (e: React.FormEvent) => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          Email
+                        </h3>
                         <a
                           href="mailto:ankur9428960482@gmail.com"
                           className="text-muted-foreground text-sm hover:text-primary transition-colors"
@@ -147,9 +158,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          Business Hours
+                        </h3>
                         <p className="text-muted-foreground text-sm">
-                          Monday - Saturday<br />
+                          Monday - Saturday
+                          <br />
                           9:00 AM - 7:00 PM
                         </p>
                       </div>
@@ -259,7 +273,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
-                        'Submitting...'
+                        "Submitting..."
                       ) : (
                         <>
                           <Send className="h-4 w-4 mr-2" />
@@ -283,7 +297,9 @@ const handleSubmit = async (e: React.FormEvent) => {
               Our Location
             </h2>
             <p className="text-muted-foreground text-sm max-w-md mx-auto">
-              Gate no.1, APMC, A/34, Old Main Line, Gunj Bazar, Unjha, Gujarat 384170.<br />
+              Gate no.1, APMC, A/34, Old Main Line, Gunj Bazar, Unjha, Gujarat
+              384170.
+              <br />
               Located in Asia's largest cumin and isabgol trading hub.
             </p>
           </div>
@@ -297,7 +313,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Patel Iswarlal Bechardas Office - Gate no.1, APMC, Unjha, Gujarat"
+            title=" Bechardas Maadhavdas Patel Exports Office - Gate no.1, APMC, Unjha, Gujarat"
           />
         </div>
       </section>

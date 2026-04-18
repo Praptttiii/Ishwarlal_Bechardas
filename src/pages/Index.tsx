@@ -1,33 +1,32 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Truck, Award, Clock } from 'lucide-react';
-import Layout from '@/components/layout/Layout';
-import heroImage from '@/assets/hero-spices.jpg';
-import cuminImage from '@/assets/cumin-seeds.jpg';
-import fennelImage from '@/assets/Fennel_Seeds.png';
-import psylliumImage from '@/assets/psyllium-seeds.jpg';
-import sesameImage from '@/assets/sesame-seeds.jpg';
-
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Shield, Truck, Award, Clock } from "lucide-react";
+import Layout from "@/components/layout/Layout";
+import heroImage from "@/assets/hero-spices.jpg";
+import cuminImage from "@/assets/cumin-seeds.jpg";
+import fennelImage from "@/assets/Fennel_Seeds.png";
+import psylliumImage from "@/assets/psyllium-seeds.jpg";
+import sesameImage from "@/assets/sesame-seeds.jpg";
 
 const productCategories = [
   {
-    name: 'Feneel Seeds',
-    description: 'Cumin, coriander, and aromatic spice seeds',
+    name: "Feneel Seeds",
+    description: "Cumin, coriander, and aromatic spice seeds",
     image: fennelImage,
   },
-   {
-    name: 'Sesame Seeds',
-    description: 'Black, and white seame seeds varieties',
+  {
+    name: "Sesame Seeds",
+    description: "Black, and white seame seeds varieties",
     image: sesameImage,
   },
-   {
-    name: 'Cumin Seeds',
-    description: 'Fennel, psyllium, and specialty seeds',
+  {
+    name: "Cumin Seeds",
+    description: "Fennel, psyllium, and specialty seeds",
     image: cuminImage,
   },
   {
-    name: 'Psyllium Husk',
-    description: 'Sesame, sunflower, and other oil seeds',
+    name: "Psyllium Husk",
+    description: "Sesame, sunflower, and other oil seeds",
     image: psylliumImage,
   },
 ];
@@ -35,23 +34,23 @@ const productCategories = [
 const whyChooseUs = [
   {
     icon: Shield,
-    title: 'Trusted Since 1976',
-    description: 'Nearly five decades of reliable service in the spice trade.',
+    title: "Trusted Since 1976",
+    description: "Nearly five decades of reliable service in the spice trade.",
   },
   {
     icon: Truck,
-    title: 'Bulk Supply Capability',
-    description: 'Large-scale orders handled with efficiency and care.',
+    title: "Bulk Supply Capability",
+    description: "Large-scale orders handled with efficiency and care.",
   },
   {
     icon: Award,
-    title: 'Consistent Quality',
-    description: 'Rigorous quality checks ensure premium grade products.',
+    title: "Consistent Quality",
+    description: "Rigorous quality checks ensure premium grade products.",
   },
   {
     icon: Clock,
-    title: 'Timely Delivery',
-    description: 'Dependable logistics for on-time shipments nationwide.',
+    title: "Timely Delivery",
+    description: "Dependable logistics for on-time shipments nationwide.",
   },
 ];
 
@@ -66,25 +65,44 @@ const Index = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl text-primary-foreground">
-           <p className="text-gold-light font-medium mb-4 tracking-wide uppercase text-sm animate-fade-in mt-3 md:mt-0">
-            </p>
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Ms Iswarlal Bechardad Patel, Unjha
+            <p className="text-gold-light font-medium mb-4 tracking-wide uppercase text-sm animate-fade-in mt-3 md:mt-0"></p>
+            <h1
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in"
+              style={{ animationDelay: "0.1s" }}
+            >
+              Bechardas Maadhavdas Patel Exports
             </h1>
-            <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h2
+              className="font-serif text-3xl md:text-4xl mb-6 animate-fade-in"
+              style={{ animationDelay: "0.1s" }}
+            >
               Leading Supplier of Quality Spices & Seeds from Unjha, Gujarat
             </h2>
-            <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-             
-            </p>
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
+            <p
+              className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            ></p>
+            <div
+              className="flex flex-wrap gap-4 animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <Button
+                asChild
+                variant="heroOutline"
+                size="lg"
+                className="bg-white text-black hover:bg-gray-100"
+              >
                 <Link to="/contact">Get a Quote</Link>
               </Button>
-              <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
+              <Button
+                asChild
+                variant="heroOutline"
+                size="lg"
+                className="bg-white text-black hover:bg-gray-100"
+              >
                 <Link to="/products">
                   View Products <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
@@ -102,7 +120,7 @@ const Index = () => {
               Our Product Range
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Premium quality spices and seeds sourced directly from trusted 
+              Premium quality spices and seeds sourced directly from trusted
               farmers and suppliers across Gujarat.
             </p>
           </div>
@@ -154,7 +172,8 @@ const Index = () => {
               Why Choose Us
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Four pillars of trust that have defined our business for generations.
+              Four pillars of trust that have defined our business for
+              generations.
             </p>
           </div>
 
@@ -187,10 +206,15 @@ const Index = () => {
             Ready to Place a Bulk Order?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-            Contact us today for competitive wholesale prices and reliable delivery 
-            across India.
+            Contact us today for competitive wholesale prices and reliable
+            delivery across India.
           </p>
-          <Button asChild variant="heroOutline" size="lg" className="bg-white text-black hover:bg-gray-100">
+          <Button
+            asChild
+            variant="heroOutline"
+            size="lg"
+            className="bg-white text-black hover:bg-gray-100"
+          >
             <Link to="/contact">Contact Us Now</Link>
           </Button>
         </div>

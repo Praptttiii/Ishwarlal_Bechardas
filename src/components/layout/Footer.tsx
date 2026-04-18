@@ -28,10 +28,36 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-serif text-lg font-semibold">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <Link to="/" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</Link>
-              <Link to="/about" className="text-sm opacity-80 hover:opacity-100 transition-opacity">About Us</Link>
-              <Link to="/products" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Products</Link>
-              <Link to="/contact" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Contact Us</Link>
+              <Link
+                to="/"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                About Us
+              </Link>
+              <Link
+                to="/vision-mission"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Vision & Mission
+              </Link>
+              <Link
+                to="/products"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Products
+              </Link>
+              <Link
+                to="/contact"
+                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Contact Us
+              </Link>
             </nav>
           </div>
 
